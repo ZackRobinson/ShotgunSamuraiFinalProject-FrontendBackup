@@ -1,13 +1,45 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.zackeryrobinson.finalprojecttest.BenefitsFragment">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        >
 
-</FrameLayout>
+    <include
+        layout="@layout/pto_card"/>
+
+    <include
+        layout="@layout/benefits_card"/>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+    <Button
+        android:id="@+id/btnRequestPto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Request PTO" />
+
+    <Button
+        android:id="@+id/btnViewRequestedPto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Requested PTO" />
+
+
+</LinearLayout>
+</ScrollView>
