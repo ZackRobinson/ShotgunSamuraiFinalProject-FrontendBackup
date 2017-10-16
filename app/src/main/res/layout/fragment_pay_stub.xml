@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/financesViewpager"
+        android:layout_width="match_parent"
+        android:layout_height="353dp"
+        />
+
+    <Button
+        android:id="@+id/btnExpenseReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Expense Report" />
+
+    <Button
+        android:id="@+id/btnReportExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Report Expense" />
+
+    <Button
+        android:id="@+id/btnRequestAdvance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Request Advance" />
+
+    <Button
+        android:id="@+id/btnAdvancesRequested"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Advances Requested" />
+</LinearLayout>
