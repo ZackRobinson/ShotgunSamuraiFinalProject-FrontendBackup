@@ -22,4 +22,6 @@
 
     <string name="hello_blank_fragment">To be changed</string>
 
+    <string name="master_branch">This branch merges with the development branch only</string>
+
 </resources>
