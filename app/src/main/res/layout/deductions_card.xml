@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
@@ -26,6 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
 
+                card_view:cardBackgroundColor="@color/colorCardAccent"
                 android:padding="10dp"
 
                 >
@@ -82,6 +84,7 @@
                 android:layout_margin="10dp"
                 android:padding="10dp"
 
+                card_view:cardBackgroundColor="@color/colorCardAccent"
                 >
 
                 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -273,6 +276,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
 
+                card_view:cardBackgroundColor="@color/colorCardAccent"
                 android:padding="10dp"
 
                 >
@@ -552,6 +556,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
 
+                card_view:cardBackgroundColor="@color/colorCardAccent"
                 android:padding="10dp"
 
                 >
@@ -615,6 +620,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
 
+                card_view:cardBackgroundColor="@color/colorCardAccent"
                 android:padding="10dp"
 
                 >
