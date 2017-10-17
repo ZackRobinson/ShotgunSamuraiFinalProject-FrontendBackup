@@ -9,7 +9,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity implements PayFragment.OnFragmentInteractionListener, BenefitsFragment.OnFragmentInteractionListener, TrainingFragment.OnFragmentInteractionListener, MarketingFragment.OnFragmentInteractionListener{
+public class MainActivity extends AppCompatActivity implements PayFragment.OnFragmentInteractionListener, BenefitsFragment.OnFragmentInteractionListener, TrainingFragment.OnFragmentInteractionListener, MarketingFragment.OnFragmentInteractionListener {
 
 
     private AccountFragment frag;
@@ -20,26 +20,19 @@ public class MainActivity extends AppCompatActivity implements PayFragment.OnFra
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_account:
-
-                    getSupportFragmentManager().beginTransaction().replace(R.id.content,new AccountFragment(), "frag").commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.content, new AccountFragment(), "frag").commit();
                     return true;
                 case R.id.navigation_pay:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.content,new PayFragment(), "frag").commit();
-
-
-
+                    getSupportFragmentManager().beginTransaction().replace(R.id.content, new PayFragment(), "frag").commit();
                     return true;
                 case R.id.navigation_benefits:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.content,new BenefitsFragment(), "frag").commit();
-
+                    getSupportFragmentManager().beginTransaction().replace(R.id.content, new BenefitsFragment(), "frag").commit();
                     return true;
                 case R.id.navigation_training:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.content,new TrainingFragment(), "frag").commit();
-
+                    getSupportFragmentManager().beginTransaction().replace(R.id.content, new TrainingFragment(), "frag").commit();
                     return true;
                 case R.id.navigation_marketing:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.content,new MarketingFragment(), "frag").commit();
-
+                    getSupportFragmentManager().beginTransaction().replace(R.id.content, new MarketingFragment(), "frag").commit();
                     return true;
             }
             return false;
@@ -57,13 +50,9 @@ public class MainActivity extends AppCompatActivity implements PayFragment.OnFra
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         frag = new AccountFragment();
-
         fragmentTransaction.replace(R.id.content, frag).commit();
-
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-
 
 
     }
