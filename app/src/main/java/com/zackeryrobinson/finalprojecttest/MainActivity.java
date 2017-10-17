@@ -32,22 +32,22 @@ public class MainActivity extends AppCompatActivity implements PayFragment.OnFra
             switch (item.getItemId()) {
                 case R.id.navigation_account:
                     tabOpen =1;
-                    return true;
+                    break;
                 case R.id.navigation_payStub:
                     tabOpen=2;
-                    return true;
+                    break;
                 case R.id.navigation_benefits:
                     tabOpen=3;
-                    return true;
+                    break;
                 case R.id.navigation_training:
                     tabOpen=4;
-                    return true;
+                    break;
                 case R.id.navigation_marketing:
                     tabOpen=5;
-                    return true;
+                    break;
             }
             openTab(tabOpen);
-            return false;
+            return true;
         }
     };
 
@@ -57,34 +57,21 @@ public class MainActivity extends AppCompatActivity implements PayFragment.OnFra
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        if (savedInstanceState!=null){
+            tabOpen = savedInstanceState.getInt("tabOpen");
+        }
         openTab(tabOpen);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        //Fix rotation on bottom navigation
-
-        Log.d(TAG, "onCreate: ");
-
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
         outState.putInt("tabOpen", tabOpen);
-
     }
 
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        tabOpen = savedInstanceState.getInt("tabOpen");
-        openTab(tabOpen);
-
-
-    }
 
 
     @Override
@@ -111,7 +98,6 @@ public class MainActivity extends AppCompatActivity implements PayFragment.OnFra
             case 5:
                 getSupportFragmentManager().beginTransaction().replace(R.id.content, marketingFrag, "frag").commit();
                 break;
-
         }
     }
 
