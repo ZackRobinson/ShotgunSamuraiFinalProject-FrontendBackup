@@ -208,7 +208,6 @@ public class BenefitsFragment extends Fragment implements View.OnClickListener {
     List<RequestedPtoClass> requestedPtos;
     private AlertDialog dialog;
 
-
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
