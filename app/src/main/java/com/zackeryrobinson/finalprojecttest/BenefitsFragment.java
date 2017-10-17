@@ -75,7 +75,7 @@ public class BenefitsFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_benefits, container, false);
-        Button btnGoodButton = (Button) view.findViewById(R.id.disIsGoodButton);
+        Button btnGoodButton = (Button) view.findViewById(R.id.btnViewRequestedPto);
         btnGoodButton.setOnClickListener(this);
 
         return view;
