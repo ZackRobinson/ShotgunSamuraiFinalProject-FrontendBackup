@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements PayFragment.OnFra
 
                     return true;
                 case R.id.navigation_marketing:
+
                     getSupportFragmentManager().beginTransaction().replace(R.id.content,new MarketingFragment(), "frag").commit();
 
                     return true;
