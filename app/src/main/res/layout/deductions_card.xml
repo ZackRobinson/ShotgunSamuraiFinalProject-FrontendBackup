@@ -85,9 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:padding="10dp"
-
-                card_view:cardBackgroundColor="@color/colorCardAccent">
+                android:padding="10dp">
 
                 <GridLayout
                     android:layout_width="match_parent"
@@ -287,7 +285,6 @@
                 android:layout_margin="10dp"
 
                 android:padding="10dp"
-                card_view:cardBackgroundColor="@color/colorCardAccent"
 
                 >
 
@@ -577,7 +574,6 @@
                 android:layout_margin="10dp"
 
                 android:padding="10dp"
-                card_view:cardBackgroundColor="@color/colorCardAccent"
 
                 >
 
@@ -642,7 +638,6 @@
                 android:layout_margin="10dp"
 
                 android:padding="10dp"
-                card_view:cardBackgroundColor="@color/colorCardAccent"
 
                 >
 
