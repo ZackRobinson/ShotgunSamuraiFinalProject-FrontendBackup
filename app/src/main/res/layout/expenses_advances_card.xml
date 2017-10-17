@@ -23,12 +23,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:layout_gravity="center_vertical"
+                    android:layout_gravity="end|center_vertical"
                     android:gravity="end|center_vertical"
                     android:padding="5dp"
                     android:layout_weight="1"
@@ -40,7 +41,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:layout_gravity="center_vertical"
+                    android:layout_gravity="start|center_vertical"
                     android:background="@drawable/display_rectangle"
 
                     android:gravity="center"
@@ -72,6 +73,8 @@
                     android:layout_gravity="center_vertical"
                     android:background="@drawable/display_rectangle"
                     android:gravity="center"
+
+                    android:maxWidth="10dp"
                     android:text="$4,000.00"
                     android:textSize="18sp"
                     android:layout_weight="1" />
