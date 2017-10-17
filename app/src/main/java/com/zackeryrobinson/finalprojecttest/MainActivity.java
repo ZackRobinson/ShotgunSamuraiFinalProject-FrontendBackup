@@ -1,23 +1,17 @@
 package com.zackeryrobinson.finalprojecttest;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity implements PayFragment.OnFragmentInteractionListener, BenefitsFragment.OnFragmentInteractionListener, TrainingFragment.OnFragmentInteractionListener, MarketingFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements PayStubFragment.OnFragmentInteractionListener, BenefitsFragment.OnFragmentInteractionListener, TrainingFragment.OnFragmentInteractionListener, MarketingFragment.OnFragmentInteractionListener {
 
     private static final String TAG = "MainActivityTag";
     private AccountFragment accountFrag = new AccountFragment();
-    private PayFragment payFrag = new PayFragment();
+    private PayStubFragment payFrag = new PayStubFragment();
     private BenefitsFragment benefitsFrag = new BenefitsFragment();
     private TrainingFragment trainingFrag = new TrainingFragment();
     private MarketingFragment marketingFrag = new MarketingFragment();
