@@ -1,22 +1,28 @@
 package com.zackeryrobinson.finalprojecttest;
 
+import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.DialogInterface;
+import android.icu.text.DateFormat;
+import android.icu.text.SimpleDateFormat;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.Inflater;
+import java.util.Objects;
 
 
 /**
@@ -28,6 +34,8 @@ import java.util.zip.Inflater;
  * create an instance of this fragment.
  */
 public class BenefitsFragment extends Fragment implements View.OnClickListener {
+    private static final String TAG = "BenefitsFragment";
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -76,7 +84,9 @@ public class BenefitsFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_benefits, container, false);
         Button btnGoodButton = (Button) view.findViewById(R.id.btnViewRequestedPto);
+        Button btnRequestPto = (Button) view.findViewById(R.id.btnRequestPto);
         btnGoodButton.setOnClickListener(this);
+        btnRequestPto.setOnClickListener(this);
 
         return view;
     }
@@ -108,36 +118,97 @@ public class BenefitsFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
-        View newView = getActivity().getLayoutInflater().inflate(R.layout.alert_dialogue_benefits,null);
+        switch (view.getId()) {
 
-        AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
-        alertDialog.setTitle("Alert");
-        RecyclerView recyclerView = (RecyclerView) newView.findViewById(R.id.rvBenefits);
-        List<BenefitsObject> benefitsObjects = new ArrayList<>();
-        benefitsObjects.add(new BenefitsObject());
-        benefitsObjects.add(new BenefitsObject());
-        benefitsObjects.add(new BenefitsObject());
-        benefitsObjects.add(new BenefitsObject());
-        BenefitsRecyclerAdapter benefitsRecyclerAdapter = new BenefitsRecyclerAdapter(benefitsObjects);
-        recyclerView.setAdapter(benefitsRecyclerAdapter);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(layoutManager);
-        alertDialog.setView(newView);
-        alertDialog.setCanceledOnTouchOutside(true);
-        alertDialog.setCancelable(true);
-        alertDialog.show();
+            case R.id.btnViewRequestedPto:
+
+                View newView = getActivity().getLayoutInflater().inflate(R.layout.alert_dialogue_benefits, null);
+
+                AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                alertDialog.setTitle("Alert");
+                RecyclerView recyclerView = (RecyclerView) newView.findViewById(R.id.rvBenefits);
+                List<BenefitsObject> benefitsObjects = new ArrayList<>();
+                benefitsObjects.add(new BenefitsObject());
+                benefitsObjects.add(new BenefitsObject());
+                benefitsObjects.add(new BenefitsObject());
+                benefitsObjects.add(new BenefitsObject());
+                BenefitsRecyclerAdapter benefitsRecyclerAdapter = new BenefitsRecyclerAdapter(benefitsObjects);
+                recyclerView.setAdapter(benefitsRecyclerAdapter);
+                LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+                recyclerView.setLayoutManager(layoutManager);
+                alertDialog.setView(newView);
+                alertDialog.setCanceledOnTouchOutside(true);
+                alertDialog.setCancelable(true);
+                alertDialog.show();
+
+                break;
+
+            case R.id.btnRequestPto:
+
+                requestedPtos = new ArrayList<>(); ///////////////////////////////////////////////////Instantiating ARRAY LIST OF RequestedPtoClass
+
+                final AlertDialog.Builder mBuilder = new AlertDialog.Builder(getContext());
+
+                Log.d(TAG, "onClick: ");
+
+                View mView = getActivity().getLayoutInflater().inflate(R.layout.alert_dialogue_request_pto, null);
+
+                tvRequestPto_dateFrom = mView.findViewById(R.id.tvRequestPto_dateFrom);
+                tvRequestPto_dateTo = mView.findViewById(R.id.tvRequestPto_dateTo);
+                tvRequestPto_description = mView.findViewById(R.id.tvRequestPto_description);
+
+                btnSubmitRequestPto = mView.findViewById(R.id.btnSubmitRequestPto);
+                btnCancelAlertDialog = mView.findViewById(R.id.btnCancelAlertDialog);
+                btnSubmitRequestPto.setOnClickListener(new View.OnClickListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.N)
+                    @Override
+                    public void onClick(View v) {
+                        Log.d(TAG, "onClick: btnSubmitRequestPto");
+                        DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+
+                        if (!Objects.equals(tvRequestPto_dateFrom.getText().toString(), "") || !Objects.equals(tvRequestPto_dateTo.getText().toString(), "")
+                                || !Objects.equals(tvRequestPto_description.getText().toString(), "")) {
+                            try {
+                                requestedPtos.add(new RequestedPtoClass((df.parse(tvRequestPto_dateFrom.getText().toString())),
+                                        df.parse(tvRequestPto_dateTo.getText().toString()), tvRequestPto_description.getText().toString()));
+
+                                Toast.makeText(getContext(), String.valueOf(requestedPtos.size()), Toast.LENGTH_SHORT).show();
+
+                                Toast.makeText(getContext(), "PTO Object added to list", Toast.LENGTH_LONG).show();
+
+                            } catch (java.text.ParseException e) {
+                                e.printStackTrace();
+                                Log.d(TAG, "requestPto: " + e);
+                            }
+                        }else{
+                            Toast.makeText(getContext(), "Empty Fields", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+                btnCancelAlertDialog.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                mBuilder.setView(mView);
+                dialog = mBuilder.create();
+                dialog.show();
+
+                break;
+
+        }
     }
+    EditText tvRequestPto_dateFrom;
+    EditText tvRequestPto_dateTo;
+    EditText tvRequestPto_description;
+    Button btnSubmitRequestPto;
+    Button btnCancelAlertDialog;
+    List<RequestedPtoClass> requestedPtos;
+    private AlertDialog dialog;
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
