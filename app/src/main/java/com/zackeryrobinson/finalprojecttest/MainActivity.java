@@ -1,5 +1,6 @@
 package com.zackeryrobinson.finalprojecttest;
 
+import android.app.AlertDialog;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,6 +9,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity implements PayFragment.OnFragmentInteractionListener, BenefitsFragment.OnFragmentInteractionListener, TrainingFragment.OnFragmentInteractionListener, MarketingFragment.OnFragmentInteractionListener{
 
@@ -67,6 +70,23 @@ public class MainActivity extends AppCompatActivity implements PayFragment.OnFra
 
 
     }
+
+    EditText tvRequestPto_dateFrom;
+    EditText tvRequestPto_dateTo;
+    private AlertDialog dialog;
+    public void requestPto(View view) {
+        final AlertDialog.Builder mBuilder = new AlertDialog.Builder(this);
+
+        View mView = getLayoutInflater().inflate(R.layout.alert_dialog_req_pto, null);
+
+        tvRequestPto_dateFrom = mView.findViewById(R.id.tvRequestPto_dateFrom);
+        tvRequestPto_dateTo = mView.findViewById(R.id.tvRequestPto_dateTo);
+
+        mBuilder.setView(mView);
+        dialog = mBuilder.create();
+        dialog.show();
+    }
+
 
     @Override
     public void onFragmentInteraction(Uri uri) {
