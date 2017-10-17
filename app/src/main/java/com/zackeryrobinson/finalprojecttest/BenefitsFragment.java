@@ -1,12 +1,22 @@
 package com.zackeryrobinson.finalprojecttest;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.zip.Inflater;
 
 
 /**
@@ -17,7 +27,7 @@ import android.view.ViewGroup;
  * Use the {@link BenefitsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BenefitsFragment extends Fragment {
+public class BenefitsFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -64,7 +74,11 @@ public class BenefitsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_benefits, container, false);
+        View view = inflater.inflate(R.layout.fragment_benefits, container, false);
+        Button btnGoodButton = (Button) view.findViewById(R.id.disIsGoodButton);
+        btnGoodButton.setOnClickListener(this);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -89,6 +103,29 @@ public class BenefitsFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        View newView = getActivity().getLayoutInflater().inflate(R.layout.alert_dialogue_benefits,null);
+
+        AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+        alertDialog.setTitle("Alert");
+        RecyclerView recyclerView = (RecyclerView) newView.findViewById(R.id.rvBenefits);
+        List<BenefitsObject> benefitsObjects = new ArrayList<>();
+        benefitsObjects.add(new BenefitsObject());
+        benefitsObjects.add(new BenefitsObject());
+        benefitsObjects.add(new BenefitsObject());
+        benefitsObjects.add(new BenefitsObject());
+        BenefitsRecyclerAdapter benefitsRecyclerAdapter = new BenefitsRecyclerAdapter(benefitsObjects);
+        recyclerView.setAdapter(benefitsRecyclerAdapter);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        alertDialog.setView(newView);
+        alertDialog.setCanceledOnTouchOutside(true);
+        alertDialog.setCancelable(true);
+        alertDialog.show();
     }
 
     /**
