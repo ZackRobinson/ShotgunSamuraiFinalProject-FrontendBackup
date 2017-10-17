@@ -8,15 +8,16 @@
     <dimen name="payStub_rowTitleTextSize">16sp</dimen>
     <dimen name="payStub_displayTextPadding">5dp</dimen>
     <dimen name="payStub_rowTextViewHeight">40dp</dimen>
-    <dimen name="payStub_rowTitleTextViewWidth">70dp</dimen>
+    <dimen name="display_rectangle_minWidth">50dp</dimen>
 
-    <dimen name="payStub_rateTextViewWidth">70dp</dimen>
-    <dimen name="payStub_hoursTextViewWidth">70dp</dimen>
-    <dimen name="payStub_totalTextViewWidth">80dp</dimen>
-    <dimen name="payStub_ytdTextViewWidth">90dp</dimen>
+    <!--<dimen name="payStub_rowTitleTextViewWidth">wrap_content</dimen>-->
+    <!--<dimen name="payStub_rateTextViewWidth">wrap_content</dimen>-->
+    <!--<dimen name="payStub_hoursTextViewWidth">wrap_content</dimen>-->
+    <!--<dimen name="payStub_totalTextViewWidth">wrap_content</dimen>-->
+    <!--<dimen name="payStub_ytdTextViewWidth">wrap_content</dimen>-->
 
-    <dimen name="payStub_deductionsTitleTextViewWidth">110dp</dimen>
-    <dimen name="payStub_deductionsTotalTextViewWidth">100dp</dimen>
-    <dimen name="payStub_deductionsYtdTextViewWidth">100dp</dimen>
+    <!--<dimen name="payStub_deductionsTitleTextViewWidth">wrap_content</dimen>-->
+    <!--<dimen name="payStub_deductionsTotalTextViewWidth">wrap_content</dimen>-->
+    <!--<dimen name="payStub_deductionsYtdTextViewWidth">wrap_content</dimen>-->
 
 </resources>

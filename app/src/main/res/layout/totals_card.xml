@@ -20,16 +20,15 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_weight="100"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="50"
+                    android:layout_weight="1"
                     android:gravity="end|center_vertical"
                     android:padding="5dp"
                     android:text="Net Pay: "
@@ -40,7 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="50"
+                    android:layout_weight="1"
                     android:background="@drawable/display_rectangle"
                     android:gravity="center"
                     android:text="$425.00"
@@ -50,16 +49,15 @@
             <LinearLayout
 
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_weight="100"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="50"
+                    android:layout_weight="1"
                     android:gravity="end|center_vertical"
                     android:padding="5dp"
                     android:text="Gross Pay YTD: "
@@ -70,7 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="50"
+                    android:layout_weight="1"
                     android:background="@drawable/display_rectangle"
                     android:gravity="center"
                     android:text="$4,000.00"
@@ -79,16 +77,15 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_weight="100"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="50"
+                    android:layout_weight="1"
                     android:gravity="end|center_vertical"
                     android:padding="5dp"
                     android:text="Net Pay YTD: "
@@ -99,7 +96,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="50"
+                    android:layout_weight="1"
                     android:background="@drawable/display_rectangle"
                     android:gravity="center"
                     android:text="$4,000.00"

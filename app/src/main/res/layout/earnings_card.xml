@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-
         android:padding="10dp">
 
         <LinearLayout
@@ -28,22 +27,25 @@
 
                 <!--Column Titles-->
                 <TextView
-                    android:layout_width="@dimen/payStub_rowTitleTextViewWidth"
+                    android:minWidth="@dimen/display_rectangle_minWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="0"
-                    android:layout_columnWeight="20"
+                    android:layout_columnWeight="1"
                     android:layout_gravity="top|start"
                     android:layout_margin="5dp"
                     android:layout_row="0"
+
                     android:gravity="start|center_vertical"
                     android:text="EARNING"
                     android:textSize="@dimen/payStub_columnTitleTextSize" />
 
                 <TextView
-                    android:layout_width="@dimen/payStub_rateTextViewWidth"
+                    android:minWidth="@dimen/display_rectangle_minWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="1"
-                    android:layout_columnWeight="15"
+                    android:layout_columnWeight="1"
                     android:layout_gravity="top|center"
                     android:layout_margin="5dp"
                     android:layout_row="0"
@@ -52,10 +54,11 @@
                     android:textSize="@dimen/payStub_columnTitleTextSize" />
 
                 <TextView
-                    android:layout_width="@dimen/payStub_hoursTextViewWidth"
+                    android:minWidth="@dimen/display_rectangle_minWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="2"
-                    android:layout_columnWeight="15"
+                    android:layout_columnWeight="1"
                     android:layout_gravity="top|center"
                     android:layout_margin="5dp"
                     android:layout_row="0"
@@ -65,10 +68,11 @@
                     android:textSize="@dimen/payStub_columnTitleTextSize" />
 
                 <TextView
-                    android:layout_width="@dimen/payStub_totalTextViewWidth"
+                    android:minWidth="@dimen/display_rectangle_minWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="3"
-                    android:layout_columnWeight="10"
+                    android:layout_columnWeight="1"
                     android:layout_gravity="top|center"
                     android:layout_margin="5dp"
                     android:layout_row="0"
@@ -79,7 +83,8 @@
 
                 <!--Regular Pay-->
                 <TextView
-                    android:layout_width="@dimen/payStub_rowTitleTextViewWidth"
+                    android:minWidth="@dimen/display_rectangle_minWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="0"
                     android:layout_gravity="top|start"
@@ -91,8 +96,9 @@
                     android:textSize="@dimen/payStub_rowTitleTextSize" />
 
                 <TextView
+                    android:minWidth="@dimen/display_rectangle_minWidth"
                     android:id="@+id/tvEarning_regularRate"
-                    android:layout_width="@dimen/payStub_rateTextViewWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="1"
                     android:layout_gravity="top|center"
@@ -100,14 +106,14 @@
                     android:layout_row="1"
                     android:background="@drawable/display_rectangle"
                     android:gravity="center"
-                    android:minWidth="60dp"
                     android:padding="@dimen/payStub_displayTextPadding"
                     android:text="47.25"
                     android:textSize="@dimen/payStub_displayTextSize" />
 
                 <TextView
+                    android:minWidth="@dimen/display_rectangle_minWidth"
                     android:id="@+id/tvEarning_regularHours"
-                    android:layout_width="@dimen/payStub_hoursTextViewWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="2"
                     android:layout_gravity="top|center"
@@ -121,8 +127,9 @@
                     android:textSize="@dimen/payStub_displayTextSize" />
 
                 <TextView
+                    android:minWidth="@dimen/display_rectangle_minWidth"
                     android:id="@+id/tvEarning_regularPay"
-                    android:layout_width="@dimen/payStub_totalTextViewWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="3"
                     android:layout_gravity="top|center"
@@ -132,12 +139,14 @@
                     android:gravity="center"
                     android:padding="@dimen/payStub_displayTextPadding"
                     android:text="1522.00"
+
                     android:textSize="@dimen/payStub_displayTextSize" />
 
 
                 <!--Overtime Pay-->
                 <TextView
-                    android:layout_width="@dimen/payStub_rowTitleTextViewWidth"
+                    android:minWidth="@dimen/display_rectangle_minWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
 
                     android:layout_column="0"
@@ -149,8 +158,9 @@
                     android:textSize="@dimen/payStub_rowTitleTextSize" />
 
                 <TextView
+                    android:minWidth="@dimen/display_rectangle_minWidth"
                     android:id="@+id/tvEarning_overtimeRate"
-                    android:layout_width="@dimen/payStub_rateTextViewWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
 
                     android:layout_column="1"
@@ -165,8 +175,9 @@
                     android:textSize="@dimen/payStub_displayTextSize" />
 
                 <TextView
+                    android:minWidth="@dimen/display_rectangle_minWidth"
                     android:id="@+id/tvEarning_overtimeHours"
-                    android:layout_width="@dimen/payStub_hoursTextViewWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="2"
                     android:layout_gravity="top|center"
@@ -179,8 +190,9 @@
                     android:textSize="@dimen/payStub_displayTextSize" />
 
                 <TextView
+                    android:minWidth="@dimen/display_rectangle_minWidth"
                     android:id="@+id/tvEarning_overTimePay"
-                    android:layout_width="@dimen/payStub_totalTextViewWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="3"
                     android:layout_gravity="top|center"
@@ -195,7 +207,8 @@
 
                 <!--Holiday-->
                 <TextView
-                    android:layout_width="@dimen/payStub_rowTitleTextViewWidth"
+                    android:minWidth="@dimen/display_rectangle_minWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="0"
                     android:layout_gravity="top|start"
@@ -207,8 +220,9 @@
 
 
                 <TextView
+                    android:minWidth="@dimen/display_rectangle_minWidth"
                     android:id="@+id/tvEarning_holidayHours"
-                    android:layout_width="@dimen/payStub_hoursTextViewWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="2"
                     android:layout_gravity="top|center"
@@ -221,8 +235,9 @@
                     android:textSize="@dimen/payStub_displayTextSize" />
 
                 <TextView
+                    android:minWidth="@dimen/display_rectangle_minWidth"
                     android:id="@+id/tvEarning_holidayPay"
-                    android:layout_width="@dimen/payStub_totalTextViewWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="3"
                     android:layout_gravity="top|center"
@@ -237,7 +252,8 @@
 
                 <!--Paid Time Off-->
                 <TextView
-                    android:layout_width="@dimen/payStub_rowTitleTextViewWidth"
+                    android:minWidth="@dimen/display_rectangle_minWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="0"
                     android:layout_gravity="top|start"
@@ -249,8 +265,9 @@
 
 
                 <TextView
+                    android:minWidth="@dimen/display_rectangle_minWidth"
                     android:id="@+id/tvEarning_ptoHours"
-                    android:layout_width="@dimen/payStub_hoursTextViewWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="2"
                     android:layout_gravity="top|center"
@@ -263,8 +280,9 @@
                     android:textSize="@dimen/payStub_displayTextSize" />
 
                 <TextView
+                    android:minWidth="@dimen/display_rectangle_minWidth"
                     android:id="@+id/tvEarning_ptoPay"
-                    android:layout_width="@dimen/payStub_totalTextViewWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="3"
                     android:layout_gravity="top|center"
@@ -280,7 +298,8 @@
 
                 <!--Totals-->
                 <TextView
-                    android:layout_width="@dimen/payStub_rowTitleTextViewWidth"
+                    android:minWidth="@dimen/display_rectangle_minWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
 
                     android:layout_column="0"
@@ -293,8 +312,9 @@
 
 
                 <TextView
+                    android:minWidth="@dimen/display_rectangle_minWidth"
                     android:id="@+id/tvEarning_totalHours"
-                    android:layout_width="@dimen/payStub_hoursTextViewWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="2"
                     android:layout_gravity="top|center"
@@ -308,8 +328,9 @@
                     android:textSize="@dimen/payStub_displayTextSize" />
 
                 <TextView
+                    android:minWidth="@dimen/display_rectangle_minWidth"
                     android:id="@+id/tvEarning_totalPay"
-                    android:layout_width="@dimen/payStub_totalTextViewWidth"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/payStub_rowTextViewHeight"
                     android:layout_column="3"
                     android:layout_gravity="top|center"
@@ -324,9 +345,6 @@
 
             </GridLayout>
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 

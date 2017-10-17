@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -7,7 +12,7 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/financesViewpager"
         android:layout_width="match_parent"
-        android:layout_height="353dp"
+        android:layout_height="400dp"
         android:layout_margin="10dp"
         android:background="@color/colorCardBack"
 
@@ -54,4 +59,4 @@
             android:text="Advances Requested" />
     </LinearLayout>
 
-</LinearLayout>
+</LinearLayout></ScrollView>
