@@ -8,39 +8,50 @@
         android:id="@+id/financesViewpager"
         android:layout_width="match_parent"
         android:layout_height="353dp"
-        android:background="@color/colorCardBackground"
+        android:layout_margin="10dp"
+        android:background="@color/colorCardBack"
 
         />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnExpenseReport"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:text="Expense Report" />
+        <Button
+            android:id="@+id/btnExpenseReport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Expense Report" />
 
-    <Button
-        android:layout_weight="1"
-        android:id="@+id/btnReportExpense"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Report Expense" />
+        <Button
+            android:id="@+id/btnReportExpense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Report Expense" />
     </LinearLayout>
-    <Button
-        android:id="@+id/btnRequestAdvance"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Request Advance" />
 
-    <Button
-        android:id="@+id/btnAdvancesRequested"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Advances Requested" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRequestAdvance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Request Advance" />
+
+        <Button
+            android:id="@+id/btnAdvancesRequested"
+            android:layout_width="0dp"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Advances Requested" />
+    </LinearLayout>
+
 </LinearLayout>
