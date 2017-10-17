@@ -25,4 +25,6 @@
 
 
 
+    <string name="master_branch">This branch merges with the development branch only</string>
+
 </resources>
