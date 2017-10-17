@@ -27,7 +27,7 @@ import static com.zackeryrobinson.finalprojecttest.R.drawable.ic_expand_more_bla
  * {@link AccountFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
  */
-public class AccountFragment extends Fragment implements  PayStubFragment.OnFragmentInteractionListener, View.OnClickListener{
+public class AccountFragment extends Fragment implements PayStubFragment.OnFragmentInteractionListener, View.OnClickListener{
 
     private OnFragmentInteractionListener mListener;
     ConstraintLayout clLodging;

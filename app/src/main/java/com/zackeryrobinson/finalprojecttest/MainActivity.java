@@ -7,6 +7,13 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.zackeryrobinson.finalprojecttest.R;
+import com.zackeryrobinson.finalprojecttest.AccountFragment;
+import com.zackeryrobinson.finalprojecttest.BenefitsFragment;
+import com.zackeryrobinson.finalprojecttest.MarketingFragment;
+import com.zackeryrobinson.finalprojecttest.PayStubFragment;
+import com.zackeryrobinson.finalprojecttest.TrainingFragment;
+
 public class MainActivity extends AppCompatActivity implements PayStubFragment.OnFragmentInteractionListener, BenefitsFragment.OnFragmentInteractionListener, TrainingFragment.OnFragmentInteractionListener, MarketingFragment.OnFragmentInteractionListener {
 
     private static final String TAG = "MainActivityTag";

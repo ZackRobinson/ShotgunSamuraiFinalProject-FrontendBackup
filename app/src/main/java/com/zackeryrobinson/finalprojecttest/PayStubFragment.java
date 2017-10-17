@@ -1,10 +1,12 @@
 package com.zackeryrobinson.finalprojecttest;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
@@ -46,7 +48,9 @@ public class PayStubFragment extends Fragment implements View.OnClickListener {
         objects.add(new FinanceObject());
         objects.add(new FinanceObject());
         viewPager.setAdapter(new CustomPagerAdapter(getContext(), objects));
-
+        ConstraintLayout constraintLayout = view.findViewById(R.id.clPayStubFragment);
+        //int height = constraintLayout.getHeight();
+        //viewPager.getLayoutParams().height = (int)(height*.90);
         Button btnRequestAdvance = view.findViewById(R.id.btnPayStubFrag_requestAdvance);//////////
         Button btnAdvancesRequested = view.findViewById(R.id.btnPayStubFrag_advancesRequested);
         btnRequestAdvance.setOnClickListener(this);
@@ -102,6 +106,10 @@ public class PayStubFragment extends Fragment implements View.OnClickListener {
                 mBuilder.setView(mView);
                 dialog = mBuilder.create();
                 dialog.show();
+
+                break;
+
+            case R.id.btnPayStubFrag_submitExpense:
 
                 break;
 
