@@ -1,6 +1,5 @@
 package com.zackeryrobinson.finalprojecttest;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.icu.text.DateFormat;
 import android.icu.text.SimpleDateFormat;
@@ -123,7 +122,7 @@ public class BenefitsFragment extends Fragment implements View.OnClickListener {
             //////////////////////////////////////////////CHRIS
             case R.id.btnViewRequestedPto:
 
-                View newView = getActivity().getLayoutInflater().inflate(R.layout.alert_dialogue_benefits, null);
+                View newView = getActivity().getLayoutInflater().inflate(R.layout.alert_dialog_benefits, null);
 
                 AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
                 alertDialog.setTitle("Alert");
@@ -153,7 +152,7 @@ public class BenefitsFragment extends Fragment implements View.OnClickListener {
 
                 Log.d(TAG, "onClick: ");
 
-                View mView = getActivity().getLayoutInflater().inflate(R.layout.alert_dialogue_request_pto, null);
+                View mView = getActivity().getLayoutInflater().inflate(R.layout.alert_dialog_request_pto, null);
 
                 tvRequestPto_dateFrom = mView.findViewById(R.id.tvRequestPto_dateFrom);
                 tvRequestPto_dateTo = mView.findViewById(R.id.tvRequestPto_dateTo);
