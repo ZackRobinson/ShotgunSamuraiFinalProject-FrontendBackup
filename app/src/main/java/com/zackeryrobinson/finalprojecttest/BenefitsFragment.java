@@ -120,6 +120,7 @@ public class BenefitsFragment extends Fragment implements View.OnClickListener {
 
         switch (view.getId()) {
 
+            //////////////////////////////////////////////CHRIS
             case R.id.btnViewRequestedPto:
 
                 View newView = getActivity().getLayoutInflater().inflate(R.layout.alert_dialogue_benefits, null);
@@ -143,6 +144,7 @@ public class BenefitsFragment extends Fragment implements View.OnClickListener {
 
                 break;
 
+            ////////////////////////////////////////////////EDEL
             case R.id.btnRequestPto:
 
                 requestedPtos = new ArrayList<>(); ///////////////////////////////////////////////////Instantiating ARRAY LIST OF RequestedPtoClass
