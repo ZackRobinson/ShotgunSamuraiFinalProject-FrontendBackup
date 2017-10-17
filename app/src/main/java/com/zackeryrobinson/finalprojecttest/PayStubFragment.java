@@ -11,21 +11,18 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link PayFragment.OnFragmentInteractionListener} interface
+ * {@link PayStubFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
  */
-public class PayFragment extends Fragment {
+public class PayStubFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
     ViewPager viewPager;
 
-    public PayFragment() {
+    public PayStubFragment() {
         // Required empty public constructor
     }
 
