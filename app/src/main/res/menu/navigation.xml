@@ -7,7 +7,7 @@
         android:title="@string/title_account" />
 
     <item
-        android:id="@+id/navigation_pay"
+        android:id="@+id/navigation_payStub"
         android:icon="@drawable/ic_attach_money_black_24dp"
         android:title="@string/title_pay" />
 
