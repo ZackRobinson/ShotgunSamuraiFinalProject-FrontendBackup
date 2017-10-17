@@ -10,8 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity implements PayFragment.OnFragmentInteractionListener, BenefitsFragment.OnFragmentInteractionListener, TrainingFragment.OnFragmentInteractionListener, MarketingFragment.OnFragmentInteractionListener{
-
-
     private AccountFragment frag;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -62,9 +60,6 @@ public class MainActivity extends AppCompatActivity implements PayFragment.OnFra
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-
-
 
     }
 
