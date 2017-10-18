@@ -23,7 +23,7 @@ public class customListView extends ListView {
     {
         if (getCount() != oldCount)
         {
-            int height = getChildAt(0).getHeight() + 1 ;
+            int height = getChildAt(0).getHeight() +1 ;
             oldCount = getCount();
             params = getLayoutParams();
             params.height = getCount() * height;

@@ -119,9 +119,9 @@ public class CustomPagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         View view = LayoutInflater.from(context).inflate(R.layout.pager_list_item, container, false);
         ButterKnife.inject(this, view);
-        /*
+
         tvDate_payDate.setText(objects.get(position).getDate_payDate());
-        tvDate_startDate.setText(objects.get(position).getDate_startDate());
+        /*tvDate_startDate.setText(objects.get(position).getDate_startDate());
         tvDate_endDate.setText(objects.get(position).getDate_endDate());
         tvEarning_regularRate.setText(objects.get(position).getEarning_regularRate());
         tvEarning_regularHours.setText(objects.get(position).getEarning_regularHours());

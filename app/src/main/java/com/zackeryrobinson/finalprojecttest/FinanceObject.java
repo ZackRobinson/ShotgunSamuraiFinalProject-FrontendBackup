@@ -51,10 +51,11 @@ public class FinanceObject {
     String Totals_grossPayYTD;
     String Totals_netPayYTD;
 
-    public FinanceObject()
+    public FinanceObject(String test)
     {
         //do we want an object with 40parameters?
         //is there a better way to do this?
+        Date_payDate = test;
     }
 
     public String getDate_endDate() {

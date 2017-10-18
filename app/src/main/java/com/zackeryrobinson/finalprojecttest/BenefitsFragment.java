@@ -125,7 +125,7 @@ public class BenefitsFragment extends Fragment implements View.OnClickListener {
                 View newView = getActivity().getLayoutInflater().inflate(R.layout.alert_dialog_benefits, null);
 
                 AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
-                alertDialog.setTitle("Alert");
+                alertDialog.setTitle("Requested PTO");
                 RecyclerView recyclerView = (RecyclerView) newView.findViewById(R.id.rvBenefits);
                 List<BenefitsObject> benefitsObjects = new ArrayList<>();
                 benefitsObjects.add(new BenefitsObject());

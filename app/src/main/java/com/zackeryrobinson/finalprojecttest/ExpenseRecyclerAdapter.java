@@ -6,32 +6,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by ios on 10/16/17.
+ * Created by ios on 10/17/17.
  */
 
-public class BenefitsRecyclerAdapter extends RecyclerView.Adapter<BenefitsRecyclerAdapter.ViewHolder>{
+public class ExpenseRecyclerAdapter extends RecyclerView.Adapter<ExpenseRecyclerAdapter.ViewHolder>{
 
     private static final String TAG = "RecyclerViewAdapter";
 
-    List<BenefitsObject> benefitsList = new ArrayList<>();
+    List<ExpenseRecyclerObject> myList = new ArrayList<>();
     private Context context;
 
-    public BenefitsRecyclerAdapter(List<BenefitsObject> benefitsList) {
-        this.benefitsList = benefitsList;
+    public ExpenseRecyclerAdapter(List<ExpenseRecyclerObject> myList) {
+        this.myList = myList;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-       //private final TextView tvPersonName;
+        //private final TextView tvPersonName;
         //private final TextView tvPersonAge;
-       // private final TextView tvPersonGender;
-       // private final TextView tvPersonHeight;
-            private final TextView tvTest;
+        // private final TextView tvPersonGender;
+        // private final TextView tvPersonHeight;
+        private final TextView tvTest;
         public ViewHolder(View itemView) {
             super(itemView);
             //bind the views in the custom item layout
@@ -45,29 +44,28 @@ public class BenefitsRecyclerAdapter extends RecyclerView.Adapter<BenefitsRecycl
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ExpenseRecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         context = parent.getContext();
 
         View view = LayoutInflater
                 .from(context)
                 .inflate(R.layout.object_list_benefits, parent,false);
-        return new ViewHolder(view);
+        return new ExpenseRecyclerAdapter.ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-
         //Person person = personList.get(position);
         //holder.tvPersonName.setText(person.getName());
         //holder.tvPersonGender.setText(person.getGender());
         //holder.tvPersonAge.setText(String.valueOf(person.getAge()));
         //holder.tvPersonHeight.setText(String.valueOf(person.getHeight()));
+
     }
 
     @Override
     public int getItemCount() {
 
-        return benefitsList.size();
+        return myList.size();
     }
 }
-
